@@ -7,8 +7,54 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- <div class="overlay">
+      <div class="ui labeled icon vertical menu">
+        <a href="" class="active item" ><i class="home icon"></i>Home</a>
+		<a href="" class="item" ><i class="file text out icon"></i>Posts</a>
+		<a href="" class="item" ><i class="cubes icon"></i>Projects</a>
+		<a href="#top" class="item" ><i class="arrow up icon"></i>Top</a>
+      </div>
+    </div> -->
 
-<%= yield %>
+	<div class="ui  tabular  menu" id="top">
+		<a href="" class="active item" data-tab="first"><i class="home icon"></i>Home</a>
+		<a href="" class="item" data-tab="second"><i class="file text out icon"></i>Posts</a>
+		<a href="" class="item" data-tab="third"><i class="cubes icon"></i>Projects</a>
+		<div class="ui bottom attached tab " data-tab="first"></div>
+		<div class="ui bottom attached tab " data-tab="second"></div>
+		<div class="ui bottom attached tab " data-tab="third"></div>
+		<div class="right menu">
+			<div class="item">
+				<div class="ui labeled icon secondary basic button">
+					<i class="sign in icon"></i>
+					Sign in
+				</div>
+			</div>
+		</div>
+	</div>
 
-</body>
+	<div class="ui text grid container">
+		<%= yield %>
+	</div>
+
+	<div class="ui text center aligned container">
+		<div class="ui divider"></div>
+		<div class="ui  container">
+			<a href="" class="item"> <i class="big link github icon"></i> </a>
+			<a href="" class="item"> <i class="big link twitter icon"></i></a>
+			<a href="" class="item"> <i class="big link weibo icon"></i></a>
+		</div>
+			
+	</div>
+	</body>
+<script>
+$('.menu .item')
+  .tab()
+;
+// $('.overlay').visibility({
+//         type: 'fixed',
+//         offset: 80
+//       });
+
+</script>
 </html>

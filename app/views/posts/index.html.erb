@@ -1,0 +1,10 @@
+<div class="ui sizer vertical piled segments">
+<% @posts.each do |post| %>
+<div class="ui segment">
+	<div class="ui huge header">
+			<%= link_to post.title, post %>
+	</div>
+	<p><%= post.created_at.strftime("%B, %d, %Y") %></p>	
+</div>	
+<% end %>
+</div>

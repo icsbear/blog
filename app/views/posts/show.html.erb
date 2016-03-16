@@ -1,0 +1,14 @@
+
+<div class="ui  basic segment">
+	<div class="ui huge header">
+		<%= @post.title %>
+	</div>
+	<div class="ui small header">
+		created at <%= time_ago_in_words(@post.created_at) %> ago
+		<%= link_to 'edit', edit_post_path(@post) %>
+		<%= link_to 'delete', post_path(@post), method: :delete, data: { confirm: "are you sure" } %>
+	</div>
+	<p>
+	<%= @post.body %>
+	</p>
+</div>

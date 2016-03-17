@@ -11,5 +11,7 @@
 		<% end %>
 	</div>
 	<p><%= markdown @post.body %></p>
-	
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key=<%= @post.id %> data-title='<%= @post.title %>' data-url="post_url"></div>
+	<!-- 多说评论框 end -->
 </div>

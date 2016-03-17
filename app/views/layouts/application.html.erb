@@ -17,12 +17,14 @@
     </div> -->
 
 	<div class="ui  tabular  menu" id="top">
-		<a href="" class="active item" data-tab="first"><i class="home icon"></i>Home</a>
-		<a href="" class="item" data-tab="second"><i class="file text out icon"></i>Posts</a>
-		<a href="" class="item" data-tab="third"><i class="cubes icon"></i>Projects</a>
-		<div class="ui bottom attached tab " data-tab="first"></div>
+		<a href="http://icsbear.herokuapp.com/" class=" item" ><i class='home icon'></i>Home</a>
+		<a href="http://icsbear.herokuapp.com/posts" class="item" ><i class="file text out icon"></i>Posts</a>
+		<a href="http://icsbear.herokuapp.com/projects" class="item" ><i class="cubes icon"></i>Projects</a>
+		
+		
+		<!-- <div class="ui bottom attached tab " data-tab="first"></div>
 		<div class="ui bottom attached tab " data-tab="second"></div>
-		<div class="ui bottom attached tab " data-tab="third"></div>
+		<div class="ui bottom attached tab " data-tab="third"></div> -->
 		<div class="right menu">
 			<% if logged_in? %>
 			  <div class="item">
@@ -51,7 +53,7 @@
 	<div class="ui text center aligned container">
 		<div class="ui divider"></div>
 		<div class="ui  container">
-			<a href="" class="item"> <i class="big link github icon"></i> </a>
+			<a href="https://github.com/icsbear" class="item"> <i class="big link github icon"></i> </a>
 			<a href="" class="item"> <i class="big link twitter icon"></i></a>
 			<a href="" class="item"> <i class="big link weibo icon"></i></a>
 		</div>
@@ -59,9 +61,9 @@
 	</div>
 	</body>
 <script>
-$('.menu .item')
-  .tab()
-;
+// $('.menu .item')
+//   .tab()
+// ;
 $('.ui.form')
 .form({
     fields: {

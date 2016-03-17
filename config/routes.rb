@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :posts
   root 'staticpages#index'
-  get    'projects' =>  'staticpages/projects'
+  get    'projects' =>  'staticpages#projects'
 
 end

@@ -16,6 +16,7 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'will_paginate', '~> 3.1'
 gem 'bcrypt', '~> 3.1', '>= 3.1.10'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

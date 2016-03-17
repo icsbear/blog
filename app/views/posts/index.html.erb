@@ -4,7 +4,7 @@
 		<% @posts.each do |post| %>
 			<div class="ui segment">
 				<div class="ui huge header">
-					<%= link_to post.title, post %>
+					<%= link_to post.title, post_url(post) %>
 				</div>
 				<p><%= post.created_at.strftime("%B, %d, %Y") %></p>	
 			</div>	

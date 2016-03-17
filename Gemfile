@@ -15,6 +15,7 @@ gem 'semantic-ui-sass', '~> 2.1', '>= 2.1.8.0'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'will_paginate', '~> 3.1'
+gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -45,5 +46,10 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+end  
 end
 

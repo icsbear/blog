@@ -24,12 +24,23 @@
 		<div class="ui bottom attached tab " data-tab="second"></div>
 		<div class="ui bottom attached tab " data-tab="third"></div>
 		<div class="right menu">
+			<% if logged_in? %>
+			  <div class="item">
+				<div class="ui labeled icon secondary basic button">
+					<i class="paste in icon"></i>
+					<%= link_to 'New post', new_post_path%>
+				</div>
+			  </div>
+			  <%= link_to "Sign out", logout_path, method: :delete, class: "item" %>
+			<% else %>
 			<div class="item">
 				<div class="ui labeled icon secondary basic button">
 					<i class="sign in icon"></i>
-					Sign in
+					<%= link_to "Sign in", login_path %>
 				</div>
-			</div>
+			  </div>
+			  
+			<% end %>	
 		</div>
 	</div>
 
@@ -51,6 +62,17 @@
 $('.menu .item')
   .tab()
 ;
+$('.ui.form')
+.form({
+    fields: {
+      session_email     : 'empty',
+      session_password   : ['minLength[6]', 'empty']
+    }
+  })
+;
+
+
+
 // $('.overlay').visibility({
 //         type: 'fixed',
 //         offset: 80

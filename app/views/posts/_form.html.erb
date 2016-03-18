@@ -9,8 +9,14 @@
 			<% end %>
 		</ul>
 	<% end %>
+	<p>
+		<%= f.label 'tags' %>
+		<%= f.text_field :tag_list, placeholder: "输入tags，用‘，’分开."%>
+	</p>
 
 	<p>
+		
+
 		<%= f.label :title %> <br>
 		<%= f.text_field :title %>
 	</p>

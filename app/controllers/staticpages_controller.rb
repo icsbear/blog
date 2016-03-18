@@ -4,4 +4,6 @@ class StaticpagesController < ApplicationController
 
   def projects
   end
+
+
 end

@@ -12,7 +12,9 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
+		@post.tag_list.add(post_params[:tag_list], parse: true)
 		if  @post.save
+
 			redirect_to @post
 		else
 			render 'new'
@@ -25,11 +27,12 @@ class PostsController < ApplicationController
 
 	def edit
 		@post = Post.find(params[:id])
+		
 	end
 
 	def update
 		@post = Post.find(params[:id])
-		if @post.update(params[:post].permit(:title, :body))
+		if @post.update(params[:post].permit(:title, :body, :tag_list))
 			redirect_to @post
 		else
 			render 'edit'
@@ -43,12 +46,22 @@ class PostsController < ApplicationController
 		redirect_to posts_path
 	end
 
+	def tag_cloud
+    	@tags = Post.tag_counts_on(:tags)
+  	end
+
+  	def tag
+  		@posts = Post.tagged_with(params[:id]).by_join_date.paginate(:page => params[:page], :per_page => 4)
+  	end
+
 
 
 	private
 
+	
+
 	def post_params
-		params.require(:post).permit(:title, :body)
+		params.require(:post).permit(:title, :body, :tag_list)
 	end
 
 	# 确保用户已登录

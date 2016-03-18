@@ -1,19 +1,13 @@
-<!-- 多说评论框 start -->
 
-<!-- 	<div class="ds-thread" data-thread-key="<%= @post.id %>" data-title="<%= @post.title %>" data-url= <%=post_url(@post) %>> </div> -->
 <div id="disqus_thread"></div>
 <script>
-/**
-* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-*/
 
 var disqus_config = function () {
-this.page.url =  '<%= post_url(@post) %>'; // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = '<%= @post.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  '<%= post_url(@post) %>'; 
+this.page.identifier = '<%= @post.id %>'; 
 };
 
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() { 
 var d = document, s = d.createElement('script');
 
 s.src = '//icsbearsblog.disqus.com/embed.js';

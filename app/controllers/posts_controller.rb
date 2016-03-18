@@ -32,6 +32,7 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
+		@post.tag_list.add(post_params[:tag_list], parse: true)
 		if @post.update(params[:post].permit(:title, :body, :tag_list))
 			redirect_to @post
 		else
